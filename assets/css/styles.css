@@ -3,20 +3,18 @@
 }
 
 :root {
-  --primary-colordark: #171100;
-  --primary-colorlight: #ffb900;
+  --primary-color-dark: #171100;
+  --primary-color-light: #ffb900;
   --font-heading: Sen, sans-serif;
 }
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  background: #fffcf4;
 }
 /* COMMON */
 .main-content {
@@ -30,7 +28,7 @@ ul {
 }
 
 a {
-  display: inline-block;
+  display: inline;
   text-decoration: none;
 }
 
@@ -45,6 +43,22 @@ a {
   color: #ffffff;
   background: #171100;
   border-radius: 999px;
+}
+.heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -1.16px;
+}
+
+.heading.lv1 {
+  font-size: 5.8rem;
+  line-height: 1.17;
+}
+
+.heading.lv2 {
+  font-size: 3.8rem;
+  line-height: 1.26;
 }
 
 main {
@@ -83,23 +97,213 @@ main {
 .nav a:hover,
 .nav li.active a {
   text-shadow: 1px 0 0 currentColor;
-  color: var(--primary-colordark);
+  color: var(--primary-color-dark);
 }
 
 .nav li.active a::after {
   display: flex;
   position: absolute;
   content: "";
-  bottom: 3px;
+  bottom: 6px;
   left: 21px;
   width: 12px;
   height: 2px;
   border-radius: 1px;
-  background: var(--primary-colordark);
+  background: var(--primary-color-dark);
 }
+
 .header .signup-btn {
   min-width: 144px;
 }
+
 .header .action {
   margin-left: 49px;
+}
+/* Hero */
+.hero {
+  padding: 56px 0 65px;
+  background: #fffcf4;
+}
+
+.hero .body {
+  display: flex;
+}
+
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+
+.hero .media-block .img {
+  display: block;
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero-summary {
+  position: absolute;
+  right: 0;
+  width: 270px;
+  padding: 24px;
+  bottom: 48px;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
+.hero-summary .item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-summary .item:nth-of-type(2) .icon {
+  background: #fcefff;
+}
+
+.hero-summary .item:nth-of-type(3) .icon {
+  background: #ebeaff;
+}
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+
+.hero-summary .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff9e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-summary .info {
+  margin-left: 16px;
+}
+
+.hero-summary .label {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 1.86;
+}
+
+.hero-summary .title {
+  color: var(--primary-color-dark);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.hero .content-block {
+  width: 52%;
+  padding: 64px 0 0 130px;
+}
+
+.content-block .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67;
+}
+
+.content-block .desc:first-of-type {
+  margin-top: 22px;
+}
+
+.content-block .cta-group {
+  display: flex;
+  margin: 38px 0 48px;
+  align-items: center;
+}
+
+.content-block .btn.hero-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color-light);
+}
+
+.content-block .watch-video {
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.content-block .watch-video .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+.content-block .watch-video span {
+  margin-left: 14px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.content-block .stats {
+  margin: 8px 0 0 -28px;
+}
+
+.content-block .stats strong {
+  padding: 0 8px 0 28px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 1.23;
+  color: #171100;
+}
+
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+.popular-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popular-top .controls {
+  display: flex;
+  gap: 18px;
+}
+
+.popular-top .control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary-color-light);
+  border: 1px solid var(--primary-color-light);
+  /* background: transparent; */
+}
+
+.popular-top .control-btn:hover {
+  color: #fff;
+  background: var(--primary-color-light);
+  cursor: pointer;
+}
+
+.popular-top .desc {
+  margin-top: 16px;
+  width: 458px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
 }

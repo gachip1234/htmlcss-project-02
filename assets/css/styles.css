@@ -22,6 +22,18 @@ body {
   max-width: calc(100% - 48px);
   margin: 0 auto;
 }
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
 ol,
 ul {
   list-style: none;
@@ -45,10 +57,10 @@ a {
   border-radius: 999px;
 }
 .heading {
-  color: #171100;
   font-family: var(--font-heading);
   font-weight: 700;
-  letter-spacing: -1.16px;
+  letter-spacing: -0.02em;
+  color: #171100;
 }
 
 .heading.lv1 {
@@ -68,6 +80,7 @@ main {
 /* HEADER */
 .header {
   background: #fffcf4;
+  z-index: 1;
 }
 .header.fixed {
   position: sticky;
@@ -265,7 +278,7 @@ main {
   line-height: 1.23;
   color: #171100;
 }
-
+/* Popular */
 .popular {
   padding: 65px 0;
   margin-top: 135px;
@@ -291,11 +304,11 @@ main {
   border-radius: 50%;
   color: var(--primary-color-light);
   border: 1px solid var(--primary-color-light);
-  /* background: transparent; */
+  background: transparent;
 }
 
 .popular-top .control-btn:hover {
-  color: #fff;
+  color: #fff !important;
   background: var(--primary-color-light);
   cursor: pointer;
 }
@@ -306,4 +319,180 @@ main {
   font-size: 1.8rem;
   line-height: 1.67;
   color: #5f5b53;
+}
+
+.popular .course-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.course-list .course-item {
+  width: calc((100% - 60px) / 3);
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
+  background: #fff;
+}
+
+.course-list .course-item:hover {
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+
+.course-list .course-item .thumb {
+  width: 100%;
+  height: 278px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.course-item .info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px 22px 22px;
+}
+
+.course-item .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-item .head .title a {
+  color: var(--primary-color-dark);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.course-item .head .rating {
+  display: flex;
+  color: var(--primary-color-light);
+  gap: 6px;
+  min-width: 47px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.course-item .info .desc {
+  display: flow-root;
+  color: #5f5b53;
+  margin-top: 6px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.course-item .info .foot {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info .foot .price {
+  color: var(--primary-color-dark);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+
+.info .btn-foot {
+  height: 50px;
+  text-align: center;
+}
+
+.info .btn-foot:hover {
+  background: var(--primary-color-light);
+  border: none;
+}
+/* introduction */
+.introduction {
+  width: 100%;
+  margin: 135px 0;
+  background: #2e2100;
+}
+
+.introduction .main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 96px 0;
+}
+
+.introduction .avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-intro {
+  display: flex;
+  flex-direction: column;
+  width: 159px;
+}
+
+.full-name {
+  margin-top: 21px;
+  color: #f7f7f7;
+  font-family: Sen;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+  width: 100%;
+}
+
+.course-student {
+  width: 100%;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 4px;
+  line-height: 1.86;
+}
+
+.card-intro .wrap .point:not(.active) {
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.wrap-quote {
+  display: flex;
+  width: 66%;
+  margin-left: auto;
+}
+
+.open-quotes {
+  width: 30px;
+  height: 28px;
+}
+
+.card-intro .wrap {
+  display: flex;
+  margin-top: 28px;
+  gap: 4px;
+}
+
+.point {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.point.active {
+  background: var(--primary-color-light);
+  margin-left: 0;
+}
+
+blockquote {
+  margin-top: 30px;
+  color: #fff;
+  width: 100%;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.54;
 }

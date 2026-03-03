@@ -507,6 +507,7 @@ blockquote {
   width: 270px;
   height: 404px;
   border-radius: 16px;
+  object-fit: cover;
 }
 
 .student-img {
@@ -559,4 +560,281 @@ blockquote {
 
 .info-learn .btn:hover {
   opacity: 0.8;
+}
+
+/* Teacher */
+.teacher {
+  display: flex;
+  padding: 135px 0;
+}
+
+.teacher .image {
+  width: 470px;
+  height: 440px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.teacher .main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.teacher .heading {
+  margin-top: 71px;
+  color: #171100;
+  font-family: Sen;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.26;
+  letter-spacing: -0.76px;
+}
+
+.teacher .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.teacher .info-teacher {
+  width: 49%;
+}
+
+.teacher .btn {
+  width: 137px;
+  height: 50px;
+  border-radius: 26px;
+  background: #ffb900;
+  border: none;
+  margin-top: 32px;
+}
+
+.blog {
+  padding: 62px 0;
+}
+.blog .body {
+  background: #fffcf4;
+}
+.blog .main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 96px 0;
+}
+
+.blog .heading {
+  color: #130606;
+  text-align: center;
+  font-family: Sen;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.26;
+  letter-spacing: -0.76px;
+}
+
+.blog .present-blog .desc {
+  margin-top: 16px;
+  width: 448px;
+  color: #696262;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.blog .card-blog {
+  width: 100%;
+  display: flex;
+  margin-top: 55px;
+  gap: 30px;
+}
+
+.card-blog .card-item {
+  width: calc(33.33% - 20px);
+  display: flex;
+  background: #ffffff;
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.card-blog .card-item:hover {
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-blog .card-item .image {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.blog .info-blog {
+  margin-top: 20px;
+}
+.blog .date {
+  display: flex;
+  align-items: center;
+}
+.blog .number-date {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.blog .dot {
+  margin-left: 20px;
+  margin-right: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffb900;
+}
+
+.blog .line {
+  display: block;
+  margin-left: 20px;
+  margin-top: 12px;
+  width: 160px;
+  height: 1px;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+
+.blog .info-blog .desc {
+  margin-top: 12px;
+  padding: 0 20px;
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.blog .btn {
+  width: 118px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+  margin: 12px auto 28px 20px;
+}
+
+.blog .btn:hover {
+  background: #ffb900;
+}
+.wrap-dots {
+  display: flex;
+  margin-top: 38px;
+}
+.wrap-dots .dot {
+  margin: 0 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  cursor: pointer;
+}
+
+.wrap-dots .dot.active {
+  background: #ffb900;
+  cursor: auto;
+}
+/* Footer */
+.footer {
+  margin-top: -62px;
+  background: #2e2100;
+}
+
+.footer .main-content {
+  padding-top: 96px;
+}
+
+.footer .column:first-of-type {
+  width: 35%;
+}
+
+.footer .column {
+  width: calc(65% / 3);
+}
+
+.footer .row {
+  display: flex;
+}
+
+.footer .desc {
+  color: #bfbcb2;
+  max-width: 267px;
+  margin: 18px 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 111px;
+  height: 15px;
+}
+
+.column .heading-lv3 {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 1.75;
+  color: #fff;
+  padding: 0px 48px 14px 0px;
+}
+
+.column .list {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.column .list::before {
+  content: "";
+  width: 130px;
+  height: 1px;
+  background: #59554b;
+  margin-bottom: 12px;
+}
+
+.column .list a {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.column .list a strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.copyright::before {
+  content: "";
+  display: block;
+  width: 1170px;
+  height: 1px;
+  background: #59554b;
+  margin-top: 38px;
+}
+
+.copyright .info {
+  padding: 28px 0;
+  text-align: center;
+  color: #807d74;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
 }
